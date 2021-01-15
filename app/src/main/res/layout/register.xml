@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_ilustrasi"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
         android:hint="Username"
@@ -146,6 +146,4 @@
         android:layout_below="@+id/login_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
-
-
 </RelativeLayout>
