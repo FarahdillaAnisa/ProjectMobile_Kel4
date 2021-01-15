@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402903447857",
+    "project_id": "projectmobilekel4",
+    "storage_bucket": "projectmobilekel4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402903447857:android:7e10c36e8029f1c84fd810",
+        "android_client_info": {
+          "package_name": "com.icha.projectmobile_kel4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402903447857-iti9cbqglo6rtfljmvqt8t3ektpkcmco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlQgY5RFGD2itkAwge0sBjrTixODTnCy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402903447857-iti9cbqglo6rtfljmvqt8t3ektpkcmco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
