@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_tambahmenu">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:title="Tambah Data Menu"
+        app:titleTextColor="#000000" />
+
+    <ImageView
+        android:id="@+id/img_ilustrasi"
+        android:layout_width="199dp"
+        android:layout_height="152dp"
+        android:layout_below="@+id/toolbar_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/undraw_online_groceries"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/img_ilustrasi"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/food"
+        app:layout_constraintStart_toStartOf="@id/img_menu" />
+
+    <EditText
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_ilustrasi"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
+        android:hint="Menu"
+        android:inputType="textPersonName"
+        android:paddingBottom="20dp"
+        android:layout_toEndOf="@id/img_menu">
+    </EditText>
+
+    <ImageView
+        android:id="@+id/img_harga"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/price"
+        app:layout_constraintStart_toStartOf="@id/img_harga" />
+
+    <EditText
+        android:id="@+id/harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="10dp"
+        android:paddingBottom="20dp"
+        android:hint="Harga"
+        android:inputType="number"
+        android:layout_toEndOf="@id/img_harga"/>
+
+    <ImageView
+        android:id="@+id/img_kategori"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/harga"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/category"
+        app:layout_constraintStart_toStartOf="@id/img_kategori" />
+
+    <Spinner
+        android:id="@+id/kategori"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_harga"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/img_kategori"
+        android:drawablePadding="10dp"
+        android:paddingBottom="20dp" />
+
+    <Button
+        android:id="@+id/tambahmenu_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/kategori"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Tambah Data Menu"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="#F1C40F"
+        android:enabled="false"/>
+</RelativeLayout>
