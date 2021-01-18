@@ -42,7 +42,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="50dp"
         android:drawablePadding="10dp"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingBottom="20dp"
         android:layout_toEndOf="@id/img_uname">
@@ -94,7 +94,7 @@
         android:drawableStart="@drawable/common_google_signin_btn_icon_light"
         android:padding="10dp"
         android:textSize="16sp"
-        android:text="  or Sign in with Google"
+        android:text="Sign Up with Google"
         android:textAllCaps="false"
         android:textColor="@android:color/darker_gray"
         android:layout_below="@+id/login_button"
