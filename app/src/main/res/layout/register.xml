@@ -18,7 +18,7 @@
         android:layout_below="@+id/toolbar_register"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:src="@drawable/undraw_Chef"
+        android:src="@drawable/undraw_chef"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
