@@ -17,14 +17,14 @@
 
     <ImageView
         android:id="@+id/img_ilustrasi"
-        android:layout_width="199dp"
-        android:layout_height="152dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:layout_below="@+id/toolbar_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/undraw_online_groceries"
+        android:src="@drawable/foodbanner2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/kuningprimary"/>
 
     <ImageView
         android:id="@+id/img_menu"
@@ -109,6 +109,6 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="#F1C40F"
+        android:background="@color/hijausecondary"
         android:enabled="false"/>
 </RelativeLayout>

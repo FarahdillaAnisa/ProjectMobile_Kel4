@@ -2,4 +2,11 @@
     <string name="app_name">ProjectMobile_Kel4</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="halaman_menu">Halaman Menu CRUD</string>
+    <string name="menu">MENU</string>
+    <string name="contoh_menu">Salad</string>
+    <string name="contoh_minum">Latte Coffee</string>
+    <string name="contoh_cemilan">Gorengan</string>
+    <string name="harga">Rp. 12000</string>
+
 </resources>
