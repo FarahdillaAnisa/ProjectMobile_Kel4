@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         register_button.setOnClickListener{
             val email = username.text.toString().trim()
-            val password = "andra12"
+            val password = epassword.text.toString().trim()
 
             if (email.isEmpty()){
                 username.error = "Email Harus Diisi"
@@ -54,8 +54,9 @@ class MainActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener(this){
                 if(it.isSuccessful){
-                    Intent(this@MainActivity,HalamanMenu::class.java).also {
+                    Intent(this@MainActivity,LoginActivity::class.java).also {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
+                        setContentView(R.layout.activity_login)
                     }
                     }else{
                     Toast.makeText(this,it.exception?.message, Toast.LENGTH_SHORT).show()
