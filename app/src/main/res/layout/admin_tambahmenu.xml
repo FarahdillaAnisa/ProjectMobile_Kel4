@@ -8,7 +8,7 @@
     tools:context=".admin_tambahmenu">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_login"
+        android:id="@+id/toolbar_addmenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -19,7 +19,7 @@
         android:id="@+id/img_ilustrasi"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_below="@+id/toolbar_login"
+        android:layout_below="@+id/toolbar_addmenu"
         android:layout_centerHorizontal="true"
         android:src="@drawable/foodbanner2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +95,16 @@
         android:layout_toEndOf="@id/img_kategori"
         android:drawablePadding="10dp"
         android:paddingBottom="20dp" />
+
+    <ImageView
+        android:id="@+id/img_upload"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/kategori"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/uploadimage"
+        app:layout_constraintStart_toStartOf="@id/img_kategori" />
 
     <ImageView
         android:id="@+id/image_preview"

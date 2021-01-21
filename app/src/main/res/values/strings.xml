@@ -8,5 +8,13 @@
     <string name="contoh_minum">Latte Coffee</string>
     <string name="contoh_cemilan">Gorengan</string>
     <string name="harga">Rp. 12000</string>
+    <string name="beranda">Beranda</string>
+    <string name="list_menu">List Menu</string>
+    <string name="list_reservasi">List Reservasi</string>
+    <string name="logout">Logout</string>
+    <string name="email">farahdilla@gmail.com</string>
+    <string name="id_kasir">ID-001</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 </resources>
