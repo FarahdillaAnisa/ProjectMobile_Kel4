@@ -1,6 +1,7 @@
 package com.icha.projectmobile_kel4
 
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         register_button.setOnClickListener{
             val email = username.text.toString().trim()
-            val password = password.text.toString().trim()
+            val password = "andra12"
 
             if (email.isEmpty()){
                 username.error = "Email Harus Diisi"
@@ -54,8 +55,7 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener(this){
                 if(it.isSuccessful){
                     Intent(this@MainActivity,HalamanMenu::class.java).also {
-                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(it)
+                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
                     }
                     }else{
                     Toast.makeText(this,it.exception?.message, Toast.LENGTH_SHORT).show()
