@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:title="Log In"
+        android:paddingLeft="170dp"
         app:titleTextColor="#000000" />
 
     <ImageView
@@ -35,7 +36,7 @@
         app:layout_constraintStart_toStartOf="@id/img_uname" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/eusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_ilustrasi"
@@ -59,7 +60,7 @@
         app:layout_constraintStart_toStartOf="@id/img_pass" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/epassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"

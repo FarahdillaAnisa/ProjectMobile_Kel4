@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:title="Register"
+        android:paddingLeft="160dp"
         app:titleTextColor="#000000" />
 
     <ImageView
@@ -58,7 +59,7 @@
         android:src="@drawable/password"
         app:layout_constraintStart_toStartOf="@id/img_pass" />
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/epassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
@@ -73,7 +74,7 @@
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/epassword"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -82,13 +83,13 @@
         android:textSize="20sp"
         android:textAllCaps="false"
         android:background="#F1C40F"
-        android:enabled="false"/>
+        android:enabled="true"/>
 
     <TextView
         android:id="@+id/textlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_button"
+        android:layout_below="@+id/register_button"
         android:layout_marginStart="20dp"
         android:layout_marginTop="34dp"
         android:text="You Already Have an Account."
@@ -98,7 +99,7 @@
         android:id="@+id/googlesigninbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_button"
+        android:layout_below="@+id/register_button"
         android:layout_marginStart="19dp"
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@id/textlogin"
