@@ -4,9 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    xmlns:de.hdodenhof="http://schemas.android.com/tools"
     android:animationCache="false"
-    android:background="@color/kuningprimary"
+    android:background="@drawable/menubg"
     android:orientation="horizontal"
     android:padding="16dp">
 
@@ -32,8 +31,7 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:background="@color/hijausecondary"
-            />
+            android:background="@color/hijausecondary"/>
 
         <TextView
             android:layout_width="wrap_content"
