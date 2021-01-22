@@ -8,12 +8,14 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_register.password
 import kotlinx.android.synthetic.main.activity_register.register_button
 import kotlinx.android.synthetic.main.activity_register.username
 import kotlinx.android.synthetic.main.login.*
+import kotlinx.android.synthetic.main.login.login_button
 import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +24,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /*login_button.setOnClickListener{
+            Intent(this@MainActivity, LoginActivity::class.java).also {
+                startActivity(it)
+            }
+        }*/
 
         auth = FirebaseAuth.getInstance()
 
@@ -54,9 +62,9 @@ class MainActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener(this){
                 if(it.isSuccessful){
-                    Intent(this@MainActivity,LoginActivity::class.java).also {
+                    Intent(this@MainActivity,HomeActivity::class.java).also {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                        setContentView(R.layout.activity_login)
+                        startActivity(it)
                     }
                     }else{
                     Toast.makeText(this,it.exception?.message, Toast.LENGTH_SHORT).show()
