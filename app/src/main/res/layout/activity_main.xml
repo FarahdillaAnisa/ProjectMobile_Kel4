@@ -65,13 +65,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        android:id="@+id/login_layout"
-        android:visibility="gone"
-        layout="@layout/activity_login"/>
-    <include
-        android:id="@+id/registrasi_layout"
-        android:visibility="gone"
-        layout="@layout/activity_register"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

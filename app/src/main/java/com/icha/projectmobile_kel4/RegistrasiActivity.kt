@@ -62,14 +62,16 @@ class RegistrasiActivity : AppCompatActivity() {
                 }
             }
     }
-
+    /*
     override fun onStart() {
         super.onStart()
-        if (auth != null) {
-            Intent(this@RegistrasiActivity, HomeActivity::class.java).also {
+        if (auth.currentUser != null) {
+            Intent(this, HomeActivity::class.java).also {
                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(it)
             }
         }
     }
+
+     */
 }

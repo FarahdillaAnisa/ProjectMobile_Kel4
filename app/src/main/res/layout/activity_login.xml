@@ -84,8 +84,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="#F1C40F"
-        android:enabled="true"/>
+        android:background="#F1C40F"/>
 
     <Button
         android:id="@+id/googlesigninbtn"

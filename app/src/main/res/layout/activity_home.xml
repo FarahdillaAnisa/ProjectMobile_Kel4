@@ -6,12 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="LogOut"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="337dp" />
+        android:text="Logout"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="14dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
