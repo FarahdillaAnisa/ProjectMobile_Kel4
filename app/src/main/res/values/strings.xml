@@ -25,6 +25,8 @@
     <string name="reservasi_nama">Nama Pemesan</string>
     <string name="reservasi_hp">No. HP Pemesan</string>
     <string name="icon">Icon</string>
+    <string name="confirmreservasi">Konfirmasi</string>
+    <string name="cancelreservasi">Batal</string>
 
 
 </resources>

@@ -9,9 +9,9 @@ import android.app.DatePickerDialog
 import android.os.PersistableBundle
 import android.widget.DatePicker
 import java.text.SimpleDateFormat
-import kotlinx.android.synthetic.main.halaman_reservasi_pelanggan.*
+import kotlinx.android.synthetic.main.update_reservasi_pelanggan.*
 
-class reservasi_pelanggan : AppCompatActivity(){
+class update_reservasi_pelanggan : AppCompatActivity(){
 
     var button_date : Button? = null
     var textView_date : TextView? = null
@@ -19,12 +19,12 @@ class reservasi_pelanggan : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.halaman_reservasi_pelanggan)
+        setContentView(R.layout.update_reservasi_pelanggan)
 
         //--------------elemen tanggal -------------------------
         //ambil elemen dari layout
-        textView_date = this.edtTgl
-        button_date = this.btnedttgl
+        textView_date = this.uptglreservasi
+        button_date = this.btnuptgl
 
         textView_date!!.text = "--/--/----"
 
@@ -42,7 +42,7 @@ class reservasi_pelanggan : AppCompatActivity(){
         // pada saat klik akan show DatePickerDialog - OnDateSetListener
         button_date!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
-                DatePickerDialog(this@reservasi_pelanggan,
+                DatePickerDialog(this@update_reservasi_pelanggan,
                     dateSetListener,
                     // set DatePickerDialog to point to today's date when it loads up
                     cal.get(Calendar.YEAR),

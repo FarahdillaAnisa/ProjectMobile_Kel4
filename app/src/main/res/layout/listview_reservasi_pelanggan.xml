@@ -53,17 +53,46 @@
         android:id="@+id/icn_edit"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
         android:contentDescription="@string/icon"
         app:layout_constraintBottom_toBottomOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit"/>
+        app:srcCompat="@drawable/edit"
+        app:tint="@color/kuningprimary" />
+
+    <Button
+        android:id="@+id/btnConfirmReservasi"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:text="@string/confirmreservasi"
+        app:layout_constraintEnd_toEndOf="@id/btnCancelReservasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ou_meja"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline2"/>
+
+    <Button
+        android:id="@+id/btnCancelReservasi"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cancelreservasi"
+        android:layout_marginStart="100dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnConfirmReservasi"
+        app:layout_constraintTop_toBottomOf="@+id/ou_meja"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline2"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="136dp"/>
+        app:layout_constraintGuide_begin="190dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
