@@ -87,7 +87,7 @@
         android:background="#F1C40F"/>
 
     <Button
-        android:id="@+id/googlesigninbtn"
+        android:id="@+id/btnRegis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/roundedbutton"

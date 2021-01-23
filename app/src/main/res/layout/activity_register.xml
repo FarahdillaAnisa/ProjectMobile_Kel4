@@ -96,7 +96,7 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/googlesigninbtn"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_button"

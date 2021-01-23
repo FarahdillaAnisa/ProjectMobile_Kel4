@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
@@ -16,62 +17,37 @@ import kotlinx.android.synthetic.main.login.*
 import java.util.regex.Pattern
 
 class RegistrasiActivity : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        auth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance();
 
         register_button.setOnClickListener {
-            val email = username.text.toString().trim()
-            val password = epassword.text.toString().trim()
 
-            if (email.isEmpty()) {
-                username.error = "Email Harus Diisi"
-                username.requestFocus()
-                return@setOnClickListener
+            if (username.text.trim().toString().isNotEmpty() || epassword.text.trim().toString().isNotEmpty()) {
+                createUser(username.text.trim().toString(), epassword.text.trim().toString())
+            } else {
+                Toast.makeText(this, "Input Required", Toast.LENGTH_SHORT).show()
             }
-
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                username.error = "Email tidak valid"
-                username.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty() || password.length < 6) {
-                epassword.error = "Password harus lebih dari 6 karakter"
-                epassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            registerUser(email, password)
+        }
+        btnLogin.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
-
-    private fun registerUser(email: String, password: String) {
+    fun createUser(email:String, password:String){
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (it.isSuccessful) {
-                    Intent(this@RegistrasiActivity, LoginActivity::class.java).also {
-                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                        setContentView(R.layout.activity_login)
-                    }
-                } else {
-                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+            .addOnCompleteListener(this){ task ->
+                if(task.isSuccessful){
+                    Log.e("Task Message", "Succesful ...");
+                    var intent = Intent(this, HomeActivity::class.java);
+                    startActivity(intent);
+                }else{
+                    Log.e("Task Message", "Failed ..."+task.exception)
                 }
             }
     }
-    /*
-    override fun onStart() {
-        super.onStart()
-        if (auth.currentUser != null) {
-            Intent(this, HomeActivity::class.java).also {
-                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
-            }
-        }
-    }
-
-     */
 }

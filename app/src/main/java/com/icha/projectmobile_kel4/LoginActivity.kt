@@ -8,70 +8,39 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.login_button
-import kotlinx.android.synthetic.main.activity_login.epassword
-import kotlinx.android.synthetic.main.activity_login.eusername
 import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        auth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance();
 
         login_button.setOnClickListener {
-            val email = eusername.text.toString().trim()
-            val password = epassword.text.toString().trim()
-
-            if (email.isEmpty()) {
-                eusername.error = "Email Harus Diisi"
-                eusername.requestFocus()
-                return@setOnClickListener
+            if(eusername.text.trim().toString().isNotEmpty() || epassword.text.trim().toString().isNotEmpty()){
+                signUser(eusername.text.trim().toString(), epassword.text.trim().toString())
+            }else{
+                Toast.makeText(this, "Input Required", Toast.LENGTH_SHORT).show()
             }
-
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                eusername.error = "Email tidak valid"
-                eusername.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty() || password.length < 6) {
-                epassword.error = "Password harus lebih dari 6 karakter"
-                epassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            loginUser(email, password)
+        }
+        btnRegis.setOnClickListener{
+            val intent = Intent(this, RegistrasiActivity::class.java)
+            startActivity(intent)
         }
     }
-
-    private fun loginUser(email: String, password: String) {
+    fun signUser(email:String, password:String){
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (it.isSuccessful) {
-                    Intent(this@LoginActivity, HomeActivity::class.java).also { intent ->
-                        intent.flags =
-                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
-                    }
-                } else {
-                    Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+            .addOnCompleteListener(this){ task ->
+                if(task.isSuccessful){
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(this, "Error"+task.exception, Toast.LENGTH_SHORT).show()
                 }
             }
     }
-    /*
-    override fun onStart() {
-        super.onStart()
-        if (auth.currentUser != null) {
-            Intent(this@LoginActivity, HomeActivity::class.java).also { intent2 ->
-                intent2.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent2)
-            }
-        }
-    }
-     */
 }
