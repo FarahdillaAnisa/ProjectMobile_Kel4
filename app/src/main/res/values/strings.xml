@@ -16,5 +16,15 @@
     <string name="id_kasir">ID-001</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="judul">Reservasi</string>
+    <string name="namapemesan">Nama Pemesan</string>
+    <string name="jumlah_meja">Jumlah Meja</string>
+    <string name="tanggal_reservasi">Tanggal Reservasi</string>
+    <string name="hp">No. HP</string>
+    <string name="reservasibtn">Reservasi</string>
+    <string name="reservasi_nama">Nama Pemesan</string>
+    <string name="reservasi_hp">No. HP Pemesan</string>
+    <string name="icon">Icon</string>
+
 
 </resources>
