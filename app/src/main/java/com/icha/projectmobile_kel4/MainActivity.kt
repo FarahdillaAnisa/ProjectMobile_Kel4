@@ -1,74 +1,43 @@
 package com.icha.projectmobile_kel4
 
 import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.view.View
-import android.widget.Toast
+import android.widget.Button
+import androidx.navigation.ui.AppBarConfiguration
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.activity_register.password
-import kotlinx.android.synthetic.main.activity_register.register_button
-import kotlinx.android.synthetic.main.activity_register.username
-import kotlinx.android.synthetic.main.login.*
-import kotlinx.android.synthetic.main.login.login_button
-import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth;
+    private lateinit var regisButton: Button
+    private lateinit var loginButton: Button
 
-    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        auth = FirebaseAuth.getInstance();
 
-        /*login_button.setOnClickListener{
-            Intent(this@MainActivity, LoginActivity::class.java).also {
-                startActivity(it)
-            }
-        }*/
+        regisButton = findViewById(R.id.regis)
+        loginButton = findViewById(R.id.login)
 
-        auth = FirebaseAuth.getInstance()
-
-        register_button.setOnClickListener{
-            val email = username.text.toString().trim()
-            val password = epassword.text.toString().trim()
-
-            if (email.isEmpty()){
-                username.error = "Email Harus Diisi"
-                username.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                username.error = "Email tidak valid"
-                username.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty() || password.length < 6){
-                epassword.error = "Password harus lebih dari 6 karakter"
-                epassword.requestFocus()
-                return@setOnClickListener
-            }
-
-            registerUser(email, password)
-            }
+        loginButton.setOnClickListener{view ->
+            val intent = Intent(view.context, LoginActivity::class.java)
+            view.context.startActivity(intent)
         }
-    private fun registerUser(email:String, password:String){
-        auth.createUserWithEmailAndPassword(email,password)
-            .addOnCompleteListener(this){
-                if(it.isSuccessful){
-                    Intent(this@MainActivity,HomeActivity::class.java).also {
-                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(it)
-                    }
-                    }else{
-                    Toast.makeText(this,it.exception?.message, Toast.LENGTH_SHORT).show()
-                }
-            }
+        regisButton.setOnClickListener{view ->
+            val intent = Intent(view.context, RegistrasiActivity::class.java)
+            view.context.startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val user = auth.currentUser;
+
+        if(user != null){
+            var intent = Intent(this, HomeActivity::class.java);
+            startActivity(intent);
+        }
     }
 }
