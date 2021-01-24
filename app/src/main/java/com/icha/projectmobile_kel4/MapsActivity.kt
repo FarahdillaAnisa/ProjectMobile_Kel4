@@ -41,7 +41,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback , GoogleMap.OnMarke
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val pekanbaru = LatLng(0.53333, 101.45)
+        val pekanbaru = LatLng(0.49104, 101.45)
         mMap.addMarker(MarkerOptions().position(pekanbaru).title("Marker di Kota Pekanbaru"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pekanbaru, 12F))
         mMap.uiSettings.isZoomControlsEnabled = true
