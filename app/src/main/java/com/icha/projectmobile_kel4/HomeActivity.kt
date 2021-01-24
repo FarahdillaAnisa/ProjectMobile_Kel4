@@ -18,5 +18,9 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java);
             startActivity(intent)
         }
+        btnMap.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java);
+            startActivity(intent)
+        }
     }
 }
