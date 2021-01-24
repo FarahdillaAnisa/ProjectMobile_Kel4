@@ -27,6 +27,11 @@
     <string name="icon">Icon</string>
     <string name="confirmreservasi">Konfirmasi</string>
     <string name="cancelreservasi">Batal</string>
+    <string name="txtkategori">Kategori</string>
+    <string name="txtharga">Harga</string>
+    <string name="txtjumlah">Jumlah Pesanan</string>
+    <string name="txtpesan">Pesan</string>
+    <string name="txttotal">Total Harga</string>
 
 
 </resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_addmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:title="Pemesanan Menu"
+        app:titleTextColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/kuningprimary"/>
+
+    <ImageView
+        android:id="@+id/img_banner1"
+        android:layout_width="206dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/foodbanner3"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_addmenu"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/kuningprimary"/>
+
+    <ImageView
+        android:id="@+id/img_banner"
+        android:layout_width="206dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/foodbanner2"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_addmenu"
+        app:layout_constraintStart_toEndOf="@id/img_banner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/kuningprimary"/>
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/img_ilustrasi"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/food"
+        app:layout_constraintTop_toBottomOf="@id/img_banner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnermenu"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_harga"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_banner"
+        android:drawablePadding="10dp"
+        android:paddingBottom="20dp" />
+
+    <ImageView
+        android:id="@+id/img_harga"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnermenu"/>
+
+    <EditText
+        android:id="@+id/edt_harga1"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/txtharga"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnermenu"/>
+
+    <ImageView
+        android:id="@+id/img_jumlah"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/carticon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_harga"
+        app:tint="@color/kuningprimary" />
+
+    <EditText
+        android:id="@+id/edt_jumlah1"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/txtjumlah"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_harga1"/>
+
+    <ImageView
+        android:id="@+id/img_total"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_jumlah"/>
+
+    <EditText
+        android:id="@+id/edt_Total"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/txttotal"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_jumlah1"/>
+
+    <Button
+        android:id="@+id/btn_tambahDetil"
+        android:layout_width="208dp"
+        android:layout_height="49dp"
+        android:text="@string/txtpesan"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_Total"
+        android:background="@color/hijausecondary"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="510dp"/>
+
+    <ListView
+        android:id="@+id/lv_tambahDetil"
+        android:layout_width="407dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

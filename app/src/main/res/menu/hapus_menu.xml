@@ -6,5 +6,6 @@
         android:icon="@drawable/delete"
         android:iconTint="@android:color/white"
         android:title="Hapus"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 </menu>
