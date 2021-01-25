@@ -22,6 +22,7 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/foodbanner3"
+        android:contentDescription="@string/app_name"
         app:layout_constraintTop_toBottomOf="@id/toolbar_addmenu"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/kuningprimary"/>
@@ -32,6 +33,7 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/foodbanner2"
+        android:contentDescription="@string/app_name"
         app:layout_constraintTop_toBottomOf="@id/toolbar_addmenu"
         app:layout_constraintStart_toEndOf="@id/img_banner1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +44,13 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@+id/img_ilustrasi"
+        android:contentDescription="@string/app_name"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/food"
         app:layout_constraintTop_toBottomOf="@id/img_banner"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnknownIdInLayout" />
 
     <Spinner
         android:id="@+id/spinnermenu"
@@ -56,7 +60,6 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_banner"
@@ -69,6 +72,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/menu"
         android:layout_marginTop="15dp"
+        android:contentDescription="@string/app_name"
         android:layout_marginStart="20dp"
         android:src="@drawable/price"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,11 +85,10 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/txtharga"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnermenu"/>
 
@@ -96,6 +99,7 @@
         android:layout_below="@+id/menu"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/carticon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_harga"
@@ -108,11 +112,10 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/txtjumlah"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_harga1"/>
 
@@ -123,27 +126,29 @@
         android:layout_below="@+id/menu"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/total"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_jumlah"/>
 
-    <EditText
+    <TextView
         android:id="@+id/edt_Total"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:paddingTop="14dp"
         android:ems="10"
         android:hint="@string/txttotal"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_jumlah1"/>
 
     <Button
-        android:id="@+id/btn_tambahDetil"
+        android:id="@+id/btn_tambahPesan"
         android:layout_width="208dp"
         android:layout_height="49dp"
         android:text="@string/txtpesan"
@@ -163,7 +168,7 @@
         app:layout_constraintGuide_begin="510dp"/>
 
     <ListView
-        android:id="@+id/lv_tambahDetil"
+        android:id="@+id/lv_tambahPesan"
         android:layout_width="407dp"
         android:layout_height="228dp"
         android:layout_marginTop="16dp"
@@ -171,4 +176,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
