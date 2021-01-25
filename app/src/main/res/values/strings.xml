@@ -16,4 +16,6 @@
     <string name="tampilan_terrain">Tampilan Terrain</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="contoh_cemilan">Gorengan</string>
+    <string name="harga">Rp. 12000</string>
 </resources>

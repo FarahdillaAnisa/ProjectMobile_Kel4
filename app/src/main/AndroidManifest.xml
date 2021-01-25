@@ -35,7 +35,7 @@
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".menufragment.RegisterActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginAdmin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

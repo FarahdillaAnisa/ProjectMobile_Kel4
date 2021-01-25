@@ -39,7 +39,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include 
+    <include
         layout="@layout/fragment_cemilan"
         android:layout_marginBottom="@android:"/>
     <include layout="@layout/fragment_cemilan"/>
