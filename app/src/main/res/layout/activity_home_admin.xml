@@ -63,7 +63,7 @@
                     android:layout_marginStart="20dp"
                     android:textSize="18sp"
                     android:textColor="#000"
-                    android:text="Users"/>
+                    android:text="List Menu"/>
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -92,7 +92,7 @@
                     android:layout_marginStart="20dp"
                     android:textSize="18sp"
                     android:textColor="#000"
-                    android:text="Menu"/>
+                    android:text="Tambah Menu"/>
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
