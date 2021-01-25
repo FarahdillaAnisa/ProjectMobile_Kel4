@@ -75,11 +75,11 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1">
             <RelativeLayout
+                android:id="@+id/btnMenu"
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:id="@+id/btnMenu"
                     android:layout_width="80dp"
                     android:src="@drawable/food"
                     android:layout_height="80dp"/>
