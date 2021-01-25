@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/menu_ouadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/hijausecondary"
+        android:text="@string/list_menu"/>
+
+    <TextView
+        android:id="@+id/harga_ouadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="number"
+        android:textColor="@color/hijausecondary"
+        android:text="@string/txtharga"/>
+
+    <TextView
+        android:id="@+id/jumlah_oadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="number"
+        android:textColor="@color/hijausecondary"
+        android:text="@string/txtjumlah"/>
+
+    <TextView
+        android:id="@+id/total_ouadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="number"
+        android:textColor="@color/hijausecondary"
+        android:text="@string/txttotal"/>
+</LinearLayout>

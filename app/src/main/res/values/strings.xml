@@ -32,6 +32,6 @@
     <string name="txtjumlah">Jumlah Pesanan</string>
     <string name="txtpesan">Pesan</string>
     <string name="txttotal">Total Harga</string>
-
+    <string name="viewpesan">Data Pemesanan</string>
 
 </resources>
