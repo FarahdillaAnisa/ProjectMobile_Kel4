@@ -8,7 +8,7 @@
     tools:context=".admin_tambahmenu">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_login"
+        android:id="@+id/toolbar_addmenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -17,21 +17,21 @@
 
     <ImageView
         android:id="@+id/img_ilustrasi"
-        android:layout_width="199dp"
-        android:layout_height="152dp"
-        android:layout_below="@+id/toolbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/toolbar_addmenu"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/undraw_online_groceries"
+        android:src="@drawable/foodbanner2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/hijausecondary"/>
 
     <ImageView
         android:id="@+id/img_menu"
         android:layout_width="36dp"
         android:layout_height="30dp"
         android:layout_below="@+id/img_ilustrasi"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/food"
         app:layout_constraintStart_toStartOf="@id/img_menu" />
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/img_ilustrasi"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:drawablePadding="10dp"
         android:hint="Menu"
         android:inputType="textPersonName"
@@ -55,7 +55,7 @@
         android:layout_width="36dp"
         android:layout_height="30dp"
         android:layout_below="@+id/menu"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/price"
         app:layout_constraintStart_toStartOf="@id/img_harga" />
@@ -65,7 +65,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/menu"
-        android:layout_marginTop="11dp"
         android:layout_marginRight="20dp"
         android:drawablePadding="10dp"
         android:paddingBottom="20dp"
@@ -78,7 +77,7 @@
         android:layout_width="36dp"
         android:layout_height="30dp"
         android:layout_below="@+id/harga"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/category"
         app:layout_constraintStart_toStartOf="@id/img_kategori" />
@@ -89,7 +88,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/img_harga"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
@@ -97,18 +96,50 @@
         android:drawablePadding="10dp"
         android:paddingBottom="20dp" />
 
+    <ImageView
+        android:id="@+id/img_upload"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/kategori"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/uploadimage"
+        app:layout_constraintStart_toStartOf="@id/img_kategori" />
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="60dp"
+        android:src="@drawable/food3"
+        android:layout_below="@id/kategori"
+        />
+
+    <Button
+        android:id="@+id/btn_choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose image"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/kategori"
+        android:layout_toEndOf="@id/image_preview"
+        android:layout_marginEnd="25dp"
+        android:background="@color/kuningprimary"
+        />
+
     <Button
         android:id="@+id/tambahmenu_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/kategori"
-        android:layout_marginTop="30dp"
+        android:layout_below="@+id/image_preview"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="Tambah Data Menu"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="#F1C40F"
+        android:background="@color/hijausecondary"
         android:enabled="false"/>
 </RelativeLayout>

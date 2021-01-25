@@ -46,6 +46,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HomeAdminActivity" />
+        <activity android:name=".admin_tambahmenu" />
     </application>
 
 </manifest>
