@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/ic_action_home"/>
+        <item
+            android:id="@+id/food"
+            android:title="Makanan"
+            android:icon="@drawable/ic_action_food"/>
+        <item
+            android:id="@+id/reservasi"
+            android:title="Reservasi"
+            android:icon="@drawable/ic_action_reservasi"/>
+        <item
+            android:id="@+id/maps"
+            android:title="Map"
+            android:icon="@drawable/ic_map"/>
+    </group>
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:title="Settings"
+                android:icon="@drawable/ic_action_settings"/>
+            <item
+                android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/ic_action_logout"/>
+        </menu>
+    </item>
+
+</menu>
