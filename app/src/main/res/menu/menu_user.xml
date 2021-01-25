@@ -16,6 +16,10 @@
             android:id="@+id/reservasi"
             android:title="Reservasi"
             android:icon="@drawable/ic_action_reservasi"/>
+        <item
+            android:id="@+id/maps"
+            android:title="Map"
+            android:icon="@drawable/ic_map"/>
     </group>
     <item android:title="Settings">
         <menu>

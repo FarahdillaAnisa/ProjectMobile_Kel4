@@ -51,6 +51,7 @@
                 android:padding="10dp"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/btnUser"
                     android:layout_width="80dp"
                     android:src="@drawable/category"
                     android:layout_height="80dp"/>
@@ -79,6 +80,7 @@
                 android:padding="10dp"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/btnMenu"
                     android:layout_width="80dp"
                     android:src="@drawable/food"
                     android:layout_height="80dp"/>
