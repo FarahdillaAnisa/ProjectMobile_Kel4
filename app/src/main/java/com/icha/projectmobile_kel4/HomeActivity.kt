@@ -8,6 +8,8 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.replace
+import com.google.android.gms.maps.MapFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.icha.projectmobile_kel4.fragment.*
@@ -21,6 +23,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var reservasiFragment: ReservasiFragment
     lateinit var settingFragment: SettingFragment
     lateinit var logoutFragment: LogoutFragment
+    lateinit var mapsFragment: MapsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +34,13 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val actionBar = supportActionBar
         actionBar?.title = "Navigation Drawer"
 
-        val drawerToggle : ActionBarDrawerToggle = object : ActionBarDrawerToggle (
+        val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
             this,
             berandaUser,
             toolBar,
             (R.string.open),
             (R.string.close)
-        ){
+        ) {
 
         }
         drawerToggle.isDrawerIndicatorEnabled = true
@@ -55,9 +58,9 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
-    override fun onNavigationItemSelected(MenuItem : MenuItem): Boolean {
-        when (MenuItem.itemId){
-            R.id.home->{
+    override fun onNavigationItemSelected(MenuItem: MenuItem): Boolean {
+        when (MenuItem.itemId) {
+            R.id.home -> {
                 homeFragment = HomeFragment()
                 supportFragmentManager
                     .beginTransaction()
@@ -65,7 +68,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .commit()
             }
-            R.id.food->{
+            R.id.food -> {
                 foodFragment = FoodFragment()
                 supportFragmentManager
                     .beginTransaction()
@@ -73,7 +76,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .commit()
             }
-            R.id.reservasi->{
+            R.id.reservasi -> {
                 reservasiFragment = ReservasiFragment()
                 supportFragmentManager
                     .beginTransaction()
@@ -81,7 +84,15 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .commit()
             }
-            R.id.setting->{
+            R.id.maps -> {
+                mapsFragment = MapsFragment()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, mapsFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+            }
+            R.id.setting -> {
                 settingFragment = SettingFragment()
                 supportFragmentManager
                     .beginTransaction()
@@ -89,7 +100,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .commit()
             }
-            R.id.logout->{
+            R.id.logout -> {
                 logoutFragment = LogoutFragment()
                 supportFragmentManager
                 auth.signOut();
@@ -100,17 +111,5 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         berandaUser.closeDrawer(GravityCompat.START)
         return true
-    }
-
-    override fun onBackPressed() {
-        if(berandaUser.isDrawerOpen(GravityCompat.START)){
-            berandaUser.closeDrawer(GravityCompat.START)
-        }else{
-            super.onBackPressed()
-        }
-        btnMap.setOnClickListener{
-            val intent = Intent(this, MapsActivity::class.java);
-            startActivity(intent)
-        }
     }
 }
