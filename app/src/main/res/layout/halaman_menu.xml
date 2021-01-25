@@ -39,8 +39,11 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <include 
+        layout="@layout/fragment_cemilan"
+        android:layout_marginBottom="@android:"/>
+    <include layout="@layout/fragment_cemilan"/>
+    <include layout="@layout/fragment_cemilan"/>
+    <include layout="@layout/fragment_cemilan"/>
+
 </LinearLayout>
