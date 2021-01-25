@@ -14,9 +14,9 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Menu> )
         val layoutInflater: LayoutInflater = LayoutInflater.from(mCtx)
         val view: View = layoutInflater.inflate(layoutResId,null)
 
-        val textNamaMenu = view.findViewById<TextView>(R.id.textMenu)
-        val textHargaMenu = view.findViewById<TextView>(R.id. textHarga)
-        val textKategoriMenu = view.findViewById<TextView>(R.id. textKategori)
+        val textNamaMenu = view.findViewById<TextView>(R.id.namaMenu)
+        val textHargaMenu = view.findViewById<TextView>(R.id. hargaMenu)
+        val textKategoriMenu = view.findViewById<TextView>(R.id. kategoriMenu)
 
         val menu = list[position]
 

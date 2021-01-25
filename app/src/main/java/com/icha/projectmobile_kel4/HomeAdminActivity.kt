@@ -17,5 +17,10 @@ class HomeAdminActivity : AppCompatActivity() {
             val intent1 = Intent(this, admin_tambahmenu::class.java)
             startActivity(intent1)
         }
+        val ggg = findViewById<ImageView>(R.id.btnUser)
+        ggg.setOnClickListener{
+            val intent1 = Intent(this, ListMakanan::class.java)
+            startActivity(intent1)
+        }
     }
 }
