@@ -62,28 +62,6 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"/>
 
-                <ImageView
-                    android:id="@+id/icn_edit"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
-                    android:layout_marginTop="40dp"
-                    android:contentDescription="edit"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/add"/>
-
-                <ImageView
-                    android:id="@+id/icn_delete"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="320dp"
-                    android:layout_marginTop="40dp"
-                    android:contentDescription="delete"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/delete"
-                    app:tint="@android:color/holo_red_dark" />
-
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
