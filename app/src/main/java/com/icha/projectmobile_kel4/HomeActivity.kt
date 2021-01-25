@@ -51,7 +51,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navView: NavigationView = findViewById(R.id.nav_beranda)
         var headerView = navView.getHeaderView(0)
-        var userNameTextView: TextView = headerView.findViewById(R.id.namaProfile)
+        var userNameTextView: TextView = headerView.findViewById(R.id.namaUser)
 
         val user = auth.currentUser
         user?.let {

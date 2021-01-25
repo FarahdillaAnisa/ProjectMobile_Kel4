@@ -35,7 +35,7 @@
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".menufragment.RegisterActivity" />
-        <activity android:name=".LoginAdmin">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,7 +44,6 @@
         </activity>
         <activity android:name=".RegistrasiActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".HomeAdminActivity" />
         <activity android:name=".admin_tambahmenu" />
         <activity android:name=".ListMakanan" />
