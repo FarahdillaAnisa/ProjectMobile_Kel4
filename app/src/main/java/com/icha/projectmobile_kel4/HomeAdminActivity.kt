@@ -12,8 +12,8 @@ class HomeAdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_admin)
 
-        val btnmenu = findViewById<ImageView>(R.id.btnMenu)
-        btnmenu.setOnClickListener{
+        val gg = findViewById<ImageView>(R.id.btnMenu)
+        gg.setOnClickListener{
             val intent1 = Intent(this, admin_tambahmenu::class.java)
             startActivity(intent1)
         }
