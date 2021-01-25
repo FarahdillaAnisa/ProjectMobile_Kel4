@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.icha.projectmobile_kel4.fragment.*
@@ -40,9 +43,21 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         ){
 
         }
+
         drawerToggle.isDrawerIndicatorEnabled = true
         berandaUser.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
+
+        val navView: NavigationView = findViewById(R.id.nav_beranda)
+        var headerView = navView.getHeaderView(0)
+        var userNameTextView: TextView = headerView.findViewById(R.id.namaProfile)
+
+        val user = auth.currentUser
+        user?.let {
+
+            val email = user.email
+            userNameTextView.text = email
+        }
 
         nav_beranda.setNavigationItemSelectedListener(this)
 
