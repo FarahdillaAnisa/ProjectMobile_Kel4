@@ -7,54 +7,49 @@
     android:orientation="vertical"
     tools:context=".HalamanMenu">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F1C40F"
-            app:tabIndicatorColor="@android:color/white"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/toolbar_awal"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="298dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_awal"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/foodbanner1"
+                app:popupTheme="@style/AppTheme">
+
+                <TextView
+                    android:id="@+id/pengguna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="135dp"
+                    android:text="MENU"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="50sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F1C40F"
+                app:tabIndicatorColor="@android:color/white"/>
+
+            <include layout="@layout/fragment_cemilan" />
+
+            <include layout="@layout/fragment_cemilan" />
+            <include layout="@layout/fragment_minuman" />
+            <include layout="@layout/fragment_minuman" />
+            <include layout="@layout/fragment_minuman" />
+            <include layout="@layout/fragment_cemilan" />
         </LinearLayout>
     </ScrollView>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_awal"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/foodbanner1"
-        app:popupTheme="@style/AppTheme">
-
-        <TextView
-            android:id="@+id/pengguna"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="135dp"
-            android:text="MENU"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <include layout="@layout/fragment_makanan"/>
-
 
 </RelativeLayout>

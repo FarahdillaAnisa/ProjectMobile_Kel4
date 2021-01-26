@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         setSupportActionBar(toolBar)
         val actionBar = supportActionBar
-        actionBar?.title = "Navigation Drawer"
+        actionBar?.title = "Reservasi Restoran"
 
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
             this,
